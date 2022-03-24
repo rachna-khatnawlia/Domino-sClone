@@ -1,29 +1,58 @@
 import React from 'react';
-import styles from '../styles.js';
 
-import { View, Text, Image,
-} from 'react-native';
+import styles from '../styles';
+
+import Home from './Home';
+import Menu from './Menu/Menu';
+import Evd from './EVD/Evd';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import { Image } from 'react-native';
 
 const Footer = () => {
+    const Tab = createBottomTabNavigator()
     return (
-        <View style={styles.bottomView}>
-            <View style={styles.footerbox}>
-                <Image source={require('./Images/menu.png')} style={styles.footerImg} />
-                <Text style={styles.footertext}>Menu</Text>
-            </View>
-            <View style={styles.footerbox}>
-                <Image source={require('./Images/tag.png')} style={styles.footerImg} />
-                <Text  style={styles.footertext}>EDV</Text>
-            </View>
-            <View style={styles.footerbox}>
-                <Image source={require('./Images/pizza.png')} style={styles.footerImg} />
-                <Text  style={styles.footertext}>Pizza Pals</Text>
-            </View>
-            <View style={styles.footerbox}>
-                <Image source={require('./Images/cart1.png')} style={styles.footerImg} />
-                <Text  style={styles.footertext}>Cart</Text>
-            </View>
-        </View>
+        <NavigationContainer>
+            <Tab.Navigator>
+                <Tab.Screen name ="Home" component={Home} options={{
+                        headerShown:false, tabBarIcon:({focused})=>(
+                            <Image 
+                                source={require('./Images/home.png')} 
+                                style={styles.footerImg}
+                            />
+                        )
+                    }} 
+                />
+                <Tab.Screen name ="Menu" component={Menu} options={{
+                        headerShown:false, tabBarIcon:({focused})=>(
+                            <Image 
+                                source={require('./Images/menu.png')} 
+                                style={styles.footerImg}
+                            />
+                        )
+                    }} 
+                />
+                <Tab.Screen name ="EVD" component={Evd} options={{
+                        headerShown:false, tabBarIcon:({focused})=>(
+                            <Image 
+                                source={require('./Images/tag.png')} 
+                                style={styles.footerImg}
+                            />
+                        )
+                    }} 
+                />
+                {/* 
+                <Tab.Screen name ="Home" component={Home} options={{
+                    headerShown:false
+                }} />
+                <Tab.Screen name ="Home" component={Home} options={{
+                    headerShown:false
+                }} /> */}
+            </Tab.Navigator>
+        </NavigationContainer>
+        
     );
 };
 export default Footer;

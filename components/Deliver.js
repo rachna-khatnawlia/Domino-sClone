@@ -24,10 +24,10 @@ const Deliver = () => {
                 />
                 
             </View>
-            <View><Text>    </Text></View>
+            <View><Text>  </Text></View>
             <View style={styles.deliverbox2}>
                 <Image source={require('./Images/train.png')} style={styles.deliverbox2Img} />
-                <Text style={{ fontSize: 11, lineHeight: 13, paddingLeft: 5 }}>Deliver{'\n'}On Train</Text>
+                <Text style={{ fontSize: 11, lineHeight: 12, paddingLeft: 5 }}>Deliver{'\n'}On Train</Text>
             </View>
         </View>
     );
