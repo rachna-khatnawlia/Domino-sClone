@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   deliverbox2: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     backgroundColor: '#fff',
     padding: 5,
     marginHorizontal: 5,
@@ -69,9 +69,10 @@ const styles = StyleSheet.create({
     height: 22,
     width: 22,
     alignSelf: 'center',
-    paddingRight: 15,
     resizeMode: 'contain',
   },
+
+  
   offers1: {
     height: 120,
     width: 280,

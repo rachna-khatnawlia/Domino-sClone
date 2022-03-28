@@ -4,14 +4,17 @@ import styles from '../styles.js';
 import { View, Text, StatusBar, Image, TouchableOpacity} from 'react-native';
 // import { TouchableOpacity } from 'react-native-gesture-handler';
 
+import NavigationUsingDrawer from './NavigationUsingDrawer.js';
+import { useNavigation } from '@react-navigation/native';
 
+const ProjectHeader = ({navigation}) => {
+    
 
-const ProjectHeader = ({Navigation}) => {
     return (
         <View style={styles.headerBox}>
             
             <View style={{flex:1}}>
-                <TouchableOpacity onPress={()=>{}}>
+                <TouchableOpacity onPress={() => navigation.toggleDrawer('Drawer')}>
                         <Image source={require('./Images/listHeader.png')} style={styles.headerImage} />
                 </TouchableOpacity>
             </View>
@@ -30,7 +33,7 @@ const ProjectHeader = ({Navigation}) => {
             
             <View style={{flex:1}}>
                 <TouchableOpacity>
-                    <Image source={require('./Images/languageHeader.jpeg')} style={{}} />
+                    <Image source={require('./Images/languageHeader.jpeg')}/>
                 </TouchableOpacity>
             </View>
             

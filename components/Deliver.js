@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles.js';
 
-import{View, Image, Text} from 'react-native';
+import{View, Image, Text, TouchableOpacity} from 'react-native';
 import RadioForm,{RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 
 
@@ -25,10 +25,10 @@ const Deliver = () => {
                 
             </View>
             <View><Text>        </Text></View>
-            <View style={styles.deliverbox2}>
+            <TouchableOpacity style={styles.deliverbox2}>
                 <Image source={require('./Images/train.png')} style={styles.deliverbox2Img} />
                 <Text style={{ fontSize: 11, lineHeight: 12, paddingLeft: 0}}>Deliver{'\n'}On Train</Text>
-            </View>
+            </TouchableOpacity>
         </View>
     );
 };

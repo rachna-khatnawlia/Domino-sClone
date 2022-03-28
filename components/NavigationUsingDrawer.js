@@ -1,22 +1,16 @@
-// import 'react-native-gesture-handler';
+import * as React from 'react';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import Home from './Home';
+import Menu from './Menu/Menu';
 
-// import React from 'react';
-// // import Drawer from './ProjectHeader'
-// // import Menu from './Menu/Menu';
+const Drawer = createDrawerNavigator();
 
-// import ProjectHeader from './ProjectHeader';
+export default function NavigationUsingDrawer() {
+  return (
+      <Drawer.Navigator screenOptions={{headerShown:false}}>
+        <Drawer.Screen name="Home" component={Home} options={{headerShown:false}}/>
+        <Drawer.Screen name="Menu" component={Menu} options={{headerShown:false}}/>
 
-// import { createDrawerNavigator } from '@react-navigation/drawer';
-
-// const Drawer = createDrawerNavigator();
-
-// export default function NavigationUsingDrawer() {
-//   return (
-//     <NavigationContainer>
-//       <Drawer.Navigator initialRouteName="Home">
-//         <Drawer.Screen name="Header" component={DrawerNavigatorHeader} />
-//         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-//       </Drawer.Navigator>
-//     </NavigationContainer>
-//   );
-// }
+      </Drawer.Navigator>
+  );
+}
