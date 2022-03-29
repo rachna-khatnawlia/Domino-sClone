@@ -3,7 +3,7 @@ const { width, height } = Dimensions.get('window');
 // alert(width)
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#e3f1ff",
+    backgroundColor: "#edf3ff",
     paddingBottom: 100,
     paddingTop: 7,
   },
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5
   },
   deliverTo: {
-    height: 10, 
+    height: 10,
     width: 10
   },
   deliver: {
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
 
-  
+
   offers1: {
     height: 120,
     width: 280,
@@ -230,8 +230,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent: 'space-around',
     backgroundColor: '#fff',
-    borderWidth:0.4,
-    borderTopColor:'grey',
+    borderWidth: 0.4,
+    borderTopColor: 'grey',
     paddingTop: 10,
     borderBottomWidth: 27,
     borderColor: '#2b63a0'
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
   footertext: {
     fontSize: 12,
   },
-  
+
   //----------------------------> MenuHeader
   expMenu: {
     backgroundColor: '#2b63a0',
@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
     // alignItems:'center',
     // color:'red'
     paddingTop: 5,
-    paddingBottom:10
+    paddingBottom: 10
   },
   Headsection1a: {
     flex: 0.1,
@@ -278,8 +278,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5
   },
   Headsection1b: {
-    flex: 0.6,
-    justifyContent: 'center'
+    flex: 0.8,
+    alignSelf: 'center',
+    // alignItems:'center'
+    // justifyContent: 'center'
   },
   Headsection1btxt: {
     color: 'white',
@@ -367,33 +369,33 @@ const styles = StyleSheet.create({
   },
 
   // EVD
-  Headsection2evd:{
-    display:'flex',
-    flexDirection:'row',
-    paddingTop:4,
-    paddingBottom:10,
-    justifyContent:'center'
+  Headsection2evd: {
+    display: 'flex',
+    flexDirection: 'row',
+    paddingTop: 4,
+    paddingBottom: 10,
+    justifyContent: 'center'
   },
-  Headsection2evdtxt:{
-    paddingHorizontal:15,
-    fontWeight:'500',
-    color:'white'
+  Headsection2evdtxt: {
+    paddingHorizontal: 15,
+    fontWeight: '500',
+    color: 'white'
   },
-  Headsection3:{
-    backgroundColor:'#e3f1ff',
+  Headsection3: {
+    backgroundColor: '#e3f1ff',
     display: 'flex',
     flexDirection: 'row',
     textAlign: 'center',
-    justifyContent:'space-between',
+    justifyContent: 'space-between',
     // paddingVertical:7,
-    paddingHorizontal:20,
-    height:35,
-    alignItems:'center'
+    paddingHorizontal: 20,
+    height: 35,
+    alignItems: 'center'
   },
-  Headsection3Img:{
-    height:20,
-    width:20,
-    marginHorizontal:7
+  Headsection3Img: {
+    height: 20,
+    width: 20,
+    marginHorizontal: 7
   },
   bestSellerCardImgedv: {
     position: 'relative',
@@ -403,57 +405,132 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
     opacity: 0.9
   },
-  section1edv:{
-    position:'absolute', 
-    top:2, 
-    right:10, 
-    backgroundColor:'maroon', 
-    paddingBottom:5
+  section1edv: {
+    position: 'absolute',
+    top: 2,
+    right: 10,
+    backgroundColor: 'maroon',
+    paddingBottom: 5
   },
-  section1aedv:{
-    color:'#fff',
-    fontSize:13,
-    fontWeight:'700',
-    padding:3
+  section1aedv: {
+    color: '#fff',
+    fontSize: 13,
+    fontWeight: '700',
+    padding: 3
   },
-  section2edv:{
-    position:'absolute',
-    bottom:35,
-    fontSize:14,
-    left:10,
-    color:'white',
-    textDecorationLine:'line-through', 
-    fontWeight:'bold'
+  section2edv: {
+    position: 'absolute',
+    bottom: 35,
+    fontSize: 14,
+    left: 10,
+    color: 'white',
+    textDecorationLine: 'line-through',
+    fontWeight: 'bold'
   },
-  section3edv:{
-    position:'absolute',
-    bottom:10,
-    right:10,
-    backgroundColor:'#fff', 
-    opacity:0.9, 
-    paddingVertical:5, 
-    paddingHorizontal:10,
-    borderRadius:5,
-    display:'flex',
-    flexDirection:'row'
+  section3edv: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+    backgroundColor: '#fff',
+    opacity: 0.9,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 5,
+    display: 'flex',
+    flexDirection: 'row'
   },
-  section4edv:{
-    display:'flex', 
-    flexDirection:'row',
-    justifyContent:'space-between',
-    paddingVertical:5
+  section4edv: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 5
   },
 
   // cart
-  cartBody:{
+  cartBody: {
     // flex:1,
-    display:'flex',
-    height:'100%',
+    display: 'flex',
+    height: '100%',
     // position:'relative',
     backgroundColor: "#e3f1ff",
-    justifyContent:'center',
-    alignItems:'center',
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+
+
+
+  // ------------------------>Login / Signup
+  LoginBody: {
+    backgroundColor: "#f2f2f4",
+    display: 'flex',
+    height: '100%',
+  },
+  loginBg: {
+    backgroundColor: '#fff',
+    margin: 10,
+    padding: 10,
+  },
+  loginBgImg: {
+    resizeMode: 'stretch',
+    width: '100%',
+    height: 115
+  },
+  blockUnderLoginImg: {
+    paddingHorizontal: 35,
+  },
+  blockUnderLoginImg1: {
+    fontSize: 25,
+    fontWeight: '200',
+    letterSpacing: 1.5,
+    paddingBottom: 3
+  },
+  blockUnderLoginImg2: {
+    fontSize: 12,
+    fontWeight: '400',
+    letterSpacing: 0.3,
+    paddingBottom: 10
+  },
+  input: {
+    height: 40,
+    marginVertical: 8,
+    // marginHorizontal: 20,
+    border: 0,
+    borderBottomWidth: 0.3,
+    paddingHorizontal: 10,
+    borderRadius: 2
+  },
+  logSignBtn: {
+    backgroundColor: '#2b63a0',
+    borderRadius: 3,
+    alignSelf: 'center',
+    marginTop: 15
+  },
+  logBtntxt: {
+    paddingVertical: 8,
+    paddingHorizontal: 20,
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  forget: {
+    textAlign: 'center',
+    paddingTop: 20,
+    paddingBottom: 10,
+    color: '#2b63a0',
+    fontWeight: '600'
+  },
+  signupBgImg: {
+    resizeMode: 'stretch',
+    width: '100%',
+    height: 180
+  },
+  signupBody: {
+    backgroundColor: "#edf3ff",
+    display: 'flex',
+    height: '100%',
+  },
 });
 
 export default styles;
+// #edf3ff

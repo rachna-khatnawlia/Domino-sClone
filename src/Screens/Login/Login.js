@@ -1,11 +1,17 @@
-import {View, Text} from 'react-native';
 import React from 'react';
-import WrapperContainer from '../../Components/WrapperContainer';
+// import styles from '../../styles/styles';
 
-export default function Login() {
+import LoginHeader from '../../Components/LoginHeader';
+import { View, Text, StatusBar, StyleSheet, SafeAreaView, TouchableOpacity, Image} from 'react-native';
+import LoginBody from '../../Components/LoginBody';
+
+export default function Login({navigation}) {
   return (
-    <WrapperContainer>
-      <Text>Login Screen</Text>
-    </WrapperContainer>
+      <SafeAreaView>
+    <View>
+        <LoginHeader navigation={navigation}/>
+        <LoginBody/>
+    </View>
+    </SafeAreaView>
   );
 }

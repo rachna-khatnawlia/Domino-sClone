@@ -6,12 +6,13 @@ import Cart from'../Screens/cart/Cart';
 import Evd from '../Screens/EVD/Evd';
 import Home from '../Screens/Home';
 
+import Login from '../Screens/Login/Login';
+
+//imports for Navigations
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import NavigationUsingDrawer from './NavigationUsingDrawer';
-
-import App from '../../App';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,8 @@ function NavigationUsingStack(){
                 <Stack.Screen name="Cart" component={Cart} options={{headerShown:false}}/>
 
                 <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
+            
+                <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
 
             </Stack.Navigator>
         </NavigationContainer>
