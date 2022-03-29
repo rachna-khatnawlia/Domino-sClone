@@ -1,14 +1,11 @@
 import React from 'react';
-// import Footer from './components/Footer.js';
-import Home from './components/Home.js';
-import FooterNavigationUsingStack from './components/NavigationUsingStack.js';
-import NavigationUsingDrawer from './components/NavigationUsingDrawer'
+import NavigationUsingStack from './src/Components/NavigationUsingStack.js';
 
 const App = () => {
   return (
     <>
       
-      <FooterNavigationUsingStack/>
+      <NavigationUsingStack/>
       
     </>
   );
