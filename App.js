@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationUsingStack from './src/Components/NavigationUsingStack.js';
+import NavigationUsingStack from './src/navigation/NavigationUsingStack.js';
 
 const App = () => {
   return (

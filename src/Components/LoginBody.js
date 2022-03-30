@@ -35,7 +35,9 @@ export default function LoginBody({ navigation }) {
                         <Text style={styles.logBtntxt}>Login</Text>
                     </Pressable>
                 </View> */}
-                <Text style={styles.forget}>FORGOT PASSWORD?</Text>
+                <TouchableOpacity>
+                    <Text style={styles.forget}>FORGOT PASSWORD?</Text>
+                </TouchableOpacity>
             </View>
 
         </View>

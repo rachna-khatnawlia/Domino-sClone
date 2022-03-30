@@ -1,8 +1,8 @@
 import React from 'react';
 
 //importing externnal file
-import MenuHeader from './MenuHeader';
-import MenuBestSeller from './MenuBestSeller';
+import MenuHeader from '../../Components/MenuHeader';
+import MenuBestSeller from '../../Components/MenuBestSeller';
 
 import {
   SafeAreaView,

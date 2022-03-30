@@ -15,6 +15,10 @@ export default function SignupBody({ navigation }) {
             <View style={styles.loginBg}>
                 <TextInput
                     style={styles.input}
+                    placeholder={"Full Name"}
+                />
+                <TextInput
+                    style={styles.input}
                     placeholder={"Mobile No.*"}
                 />
                 <TextInput

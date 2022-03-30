@@ -3,10 +3,10 @@ import React from 'react';
 import styles from '../styles/styles';
 
 //components import
-import ProjectHeader from './ProjectHeader';
-import Deliver from './Deliver';
-import ChoosePizza from './ChoosePizza';
-import EasyOrder from './EasyOrder';
+import ProjectHeader from '../Components/ProjectHeader';
+import Deliver from '../Components/Deliver';
+import ChoosePizza from '../Components/ChoosePizza';
+import EasyOrder from '../Components/EasyOrder';
 
 // flatlist data import
 import Offers1 from '../assets/FlatListData/offers1';
@@ -20,8 +20,6 @@ import {
     FlatList, Image, SafeAreaView, ScrollView, ImageBackground, Pressable
 } from 'react-native';
 
-//import drawer
-import NavigationUsingDrawer from '../Components/NavigationUsingDrawer.js';
 
 const Home = ({navigation}) => {
     
@@ -34,7 +32,7 @@ const Home = ({navigation}) => {
             <ScrollView style={{ display: 'flex' }}>
                 <View style={styles.container}>
                     {/* Deliver  */}
-                    <Deliver />
+                    <Deliver navigation={navigation}/>
                     
                     {/* offers */}
                     <FlatList horizontal

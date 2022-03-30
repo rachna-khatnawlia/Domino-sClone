@@ -495,23 +495,24 @@ const styles = StyleSheet.create({
     height: 40,
     marginVertical: 8,
     // marginHorizontal: 20,
-    border: 0,
+    borderWidth: 0,
     borderBottomWidth: 0.3,
     paddingHorizontal: 10,
     borderRadius: 2
   },
   logSignBtn: {
     backgroundColor: '#2b63a0',
-    borderRadius: 3,
+    borderRadius: 2,
     alignSelf: 'center',
-    marginTop: 15
+    marginTop: 15,
+    overflow: 'hidden'
   },
   logBtntxt: {
     paddingVertical: 8,
     paddingHorizontal: 20,
     color: 'white',
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   forget: {
     textAlign: 'center',
@@ -523,13 +524,84 @@ const styles = StyleSheet.create({
   signupBgImg: {
     resizeMode: 'stretch',
     width: '100%',
-    height: 180
+    height: 200
   },
   signupBody: {
     backgroundColor: "#edf3ff",
     display: 'flex',
     height: '100%',
   },
+
+  //------------------->DeliveronTrain------------------------
+  dotBg: {
+    margin: 8,
+    borderRadius: 3,
+    overflow: 'hidden'
+  },
+  dotBgImg: {
+    width: '100%',
+    resizeMode: 'stretch',
+    height: 100
+  },
+  whitedotbg: { 
+    backgroundColor: '#fff', 
+    padding: 15, 
+    margin: 8 
+  },
+  txtAfterInputPNR: { 
+    color: 'green', 
+    fontWeight: '300', 
+    letterSpacing: 0.5, 
+    paddingHorizontal: 5 
+  },
+  dotCheckBox: { 
+    alignSelf: "center", 
+    height: 15, 
+    width: 15, 
+    marginRight: 7 
+  },
+  dotChecktxt: { 
+    fontSize: 13, 
+    color: 'grey', 
+    fontWeight: '500' 
+  },
+  dotHisTxt1: { 
+    flex: 0.1 
+  },
+  dotHisTxt2: { 
+    flex: 0.8, 
+    alignSelf: 'center' 
+  },
+  dotHisTxt3: { 
+    flex: 0.1, 
+    alignSelf: 'center', 
+    alignItems: 'flex-end' 
+  },
+  flexRow: {
+    display: 'flex', flexDirection: 'row',
+  },
+  ulText1: {
+    fontWeight: 'bold',
+    fontSize: 15,
+    paddingBottom: 5
+  },
+  ul2: {
+    // fontWeight:'bold',
+    fontSize: 20,
+    fontWeight: 'bold'
+  },
+  ul2txt: {
+    // color:'grey',
+    fontWeight: "300",
+    padding: 5,
+  },
+  ulText2: {
+    fontWeight: 'bold',
+    color: '',
+    fontSize: 15,
+    paddingBottom: 5
+  },
+
 });
 
 export default styles;
