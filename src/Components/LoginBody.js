@@ -7,10 +7,10 @@ export default function LoginBody({ navigation }) {
         <View style={styles.LoginBody}>
 
             <Image
-                    source={require('../assets/images/login/bg.jpeg')}
-                    style={styles.loginBgImg}
+                source={require('../assets/images/login/bg.jpeg')}
+                style={styles.loginBgImg}
             />
-            
+
             <View style={styles.blockUnderLoginImg}>
                 <Text style={styles.blockUnderLoginImg1}>WELCOME</Text>
                 <Text style={styles.blockUnderLoginImg2}>Sign in to continue to Domino's</Text>
@@ -39,6 +39,10 @@ export default function LoginBody({ navigation }) {
                     <Text style={styles.forget}>FORGOT PASSWORD?</Text>
                 </TouchableOpacity>
             </View>
+
+            <TouchableOpacity onPress={() => { navigation.navigate('SignUp') }}>
+                <Text>Signup</Text>
+            </TouchableOpacity>
 
         </View>
     );

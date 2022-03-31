@@ -7,12 +7,12 @@ export default function LoginHeader({ navigation }) {
         <View style={styles.expMenu}>
             <View style={[styles.Headsection1]}>
                 <View style={styles.Headsection1a}>
-                    <TouchableOpacity onPress={() => { navigation.navigate('Home') }}>
+                    {/* <TouchableOpacity onPress={() => { navigation.navigate('Home') }}>
                         <Image
                             source={require('../assets/images/HeaderImages/backwardArrow.png')}
                             style={styles.Headsection1Img}
                         />
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
 
                 <View style={[styles.Headsection1b]}>

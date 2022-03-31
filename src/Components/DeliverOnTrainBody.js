@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styles from '../styles/styles';
-import { View, Text, TouchableOpacity, Image, TextInput, Pressable, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, Image, TextInput, Alert } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import Unorderedlist from 'react-native-unordered-list';
 
+import ImagePath from '../constants/ImagePath';
 
 export default function DeliverOnTrainBody({ navigation }) {
     const [agree, setAgree] = useState(false);
@@ -23,7 +24,7 @@ export default function DeliverOnTrainBody({ navigation }) {
             {/*-------------- Bannner IMAGE----------------*/}
             <View style={styles.dotBg}>
                 <Image
-                    source={require('../assets/images/DeliverOnTrain/deliverBg.jpeg')}
+                    source={ImagePath.dotBg}
                     style={styles.dotBgImg}
                 />
             </View>
@@ -66,22 +67,13 @@ export default function DeliverOnTrainBody({ navigation }) {
                 >
                 <View style={[styles.whitedotbg, styles.flexRow,]}>
                     <View style={styles.dotHisTxt1}>
-                        <Image
-                            source={require('../assets/images/train.png')}
-                            style={styles.footerImg}
-                        />
+                        <Image source={ImagePath.train}style={styles.footerImg} />
                     </View>
                     <View style={styles.dotHisTxt2}>
                         <Text>IRCTC ORDER HISTORY</Text>
                     </View>
                     <View style={styles.dotHisTxt3}>
-                        <Image
-                            source={require('../assets/images/arrow.png')}
-                            style={{
-                                height: 15,
-                                width: 15
-                            }}
-                        />
+                        <Image source={ImagePath.doubleArrow} style={{ height: 15, width: 15 }}/>
                     </View>
                 </View>
             </TouchableOpacity>
@@ -101,9 +93,8 @@ export default function DeliverOnTrainBody({ navigation }) {
                 </Unorderedlist>
 
                 <TouchableOpacity>
-                    <Text style={{ color: '#2b63a0', paddingTop: 10, fontWeight: '500' }}>READ MORE</Text>
+                    <Text style={ styles.ulText3 }>READ MORE</Text>
                 </TouchableOpacity>
-
             </View>
 
         </View>

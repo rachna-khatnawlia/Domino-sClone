@@ -1,12 +1,10 @@
 import React from 'react';
-import NavigationUsingStack from './src/navigation/NavigationUsingStack.js';
+import Routes from './src/navigation/Routes.js';
 
 const App = () => {
   return (
     <>
-      
-      <NavigationUsingStack/>
-      
+      <Routes/>
     </>
   );
 };

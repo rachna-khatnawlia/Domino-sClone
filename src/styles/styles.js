@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
     borderRadius: 2
   },
   logSignBtn: {
-    backgroundColor: '#2b63a0',
+    backgroundColor: 'green',
     borderRadius: 2,
     alignSelf: 'center',
     marginTop: 15,
@@ -516,8 +516,8 @@ const styles = StyleSheet.create({
   },
   forget: {
     textAlign: 'center',
-    paddingTop: 20,
-    paddingBottom: 10,
+    paddingTop: 10,
+    // paddingBottom: 10,
     color: '#2b63a0',
     fontWeight: '600'
   },
@@ -601,6 +601,11 @@ const styles = StyleSheet.create({
     fontSize: 15,
     paddingBottom: 5
   },
+  ulText3:{
+    color: '#2b63a0', 
+    paddingTop: 10, 
+    fontWeight: '500'
+  }
 
 });
 

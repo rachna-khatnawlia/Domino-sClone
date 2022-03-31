@@ -7,7 +7,7 @@ export default function SignupHeader({ navigation }) {
         <View style={styles.expMenu}>
             <View style={[styles.Headsection1]}>
                 <View style={styles.Headsection1a}>
-                    <TouchableOpacity onPress={() => { navigation.navigate('Home') }}>
+                    <TouchableOpacity onPress={() => { navigation.navigate('Login') }}>
                         <Image
                             source={require('../assets/images/HeaderImages/backwardArrow.png')}
                             style={styles.Headsection1Img}
@@ -16,7 +16,9 @@ export default function SignupHeader({ navigation }) {
                 </View>
 
                 <View style={[styles.Headsection1b]}>
-                    <Text style={{ fontSize: 16, color: '#fff', fontWeight: '500', textAlign: 'center' }}>SignUp Screen</Text>
+                    <Text style={{ fontSize: 16, color: '#fff', fontWeight: '500', textAlign: 'center' }}>
+                        SignUp Screen
+                    </Text>
                 </View>
             </View>
         </View>

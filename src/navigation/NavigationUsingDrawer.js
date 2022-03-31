@@ -51,8 +51,8 @@ export default function NavigationUsingDrawer() {
             ),
           }}
         />
-        <Drawer.Screen name="Login" component={Login} options={{headerShown:false}}/>
-        <Drawer.Screen name="SignUp" component={SignUp} options={{headerShown:false}}/>
+        {/* <Drawer.Screen name="Login" component={Login} options={{headerShown:false}}/>
+        <Drawer.Screen name="SignUp" component={SignUp} options={{headerShown:false}}/> */}
 
 
       </Drawer.Navigator>

@@ -10,7 +10,7 @@ export default function Login({navigation}) {
       <SafeAreaView>
     <View>
         <LoginHeader navigation={navigation}/>
-        <LoginBody/>
+        <LoginBody navigation={navigation}/>
     </View>
     </SafeAreaView>
   );

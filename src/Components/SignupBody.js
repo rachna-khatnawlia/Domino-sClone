@@ -11,31 +11,20 @@ export default function SignupBody({ navigation }) {
                 style={styles.signupBgImg}
             />
 
-
             <View style={styles.loginBg}>
-                <TextInput
-                    style={styles.input}
-                    placeholder={"Full Name"}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder={"Mobile No.*"}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder={"Password"}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder={"Repeat Password"}
-                />
+                <TextInput style={styles.input} placeholder={"Full Name"} />
+                <TextInput style={styles.input} placeholder={"Mobile No.*"} />
+                <TextInput style={styles.input} placeholder={"Password"} />
+                <TextInput style={styles.input} placeholder={"Repeat Password"} />
+
                 <TouchableOpacity>
                     <View style={styles.logSignBtn}>
                         <Text style={styles.logBtntxt}>SUBMIT</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
-                    <Text style={styles.forget}>Already Have an Account? Signup</Text>
+                
+                <TouchableOpacity onPress={() => { navigation.navigate('Login') }}>
+                    <Text style={styles.forget}>Already Have an Account? LOGIN</Text>
                 </TouchableOpacity>
             </View>
 
