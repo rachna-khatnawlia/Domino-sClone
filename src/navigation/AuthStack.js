@@ -7,8 +7,8 @@ import navigationStrings from './navigationStrings'
 export default function AuthStack(Stack) {
     return (
         <>
-            <Stack.Screen name={navigationStrings.SIGNUP} component={SignUp} options={{ headerShown: false }} />
             <Stack.Screen name={navigationStrings.LOGIN} component={Login} options={{ headerShown: false }} />
+            <Stack.Screen name={navigationStrings.SIGNUP} component={SignUp} options={{ headerShown: false }} />
         </>
     );
 }

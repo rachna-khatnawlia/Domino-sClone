@@ -2,15 +2,18 @@ import React from 'react';
 import styles from '../styles/styles';
 
 import { View, Text, StatusBar, Image, TouchableOpacity} from 'react-native';
-// import { TouchableOpacity } from 'react-native-gesture-handler';
 
-import NavigationUsingDrawer from '../navigation/NavigationUsingDrawer';
-import { useNavigation } from '@react-navigation/native';
+import ActionSheet, { SheetManager } from "react-native-actions-sheet";
+
+import Language from './Language';
+
 
 const ProjectHeader = ({navigation}) => {
+    function ShowActionSheet(){
+        SheetManager.show("language");
+    }
     return (
         <View style={styles.headerBox}>
-            
             <View style={{flex:1}}>
                 <TouchableOpacity onPress={() => navigation.toggleDrawer('Drawer')}>
                     <Image source={require('../assets/images/listHeader.png')} style={styles.headerImage} />
@@ -28,12 +31,17 @@ const ProjectHeader = ({navigation}) => {
                 {/* <Image source={require('../assets/images/pizzaPalHeader.jpeg')} style={{height:40,width:70}} /> */}
             </View>
             
+            <Language/>
+
             <View style={{flex:1}}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={ShowActionSheet}>
                     <Image source={require('../assets/images/languageHeader.jpeg')}/>
                 </TouchableOpacity>
             </View>
             
+            {/* <ActionSheet id="language" style>
+                <Text>Hello ActionSheet</Text>
+            </ActionSheet> */}
         </View> 
     );
 };

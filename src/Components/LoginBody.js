@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from '../styles/styles';
 import { View, Text, TouchableOpacity, Image, TextInput, Pressable } from 'react-native';
+import GreenBtn from './GreenBtn';
 
-export default function LoginBody({ navigation }) {
+export default function LoginBody({ navigation, value }) {
     return (
         <View style={styles.LoginBody}>
 
@@ -25,16 +26,7 @@ export default function LoginBody({ navigation }) {
                     style={styles.input}
                     placeholder={"Domino's Password"}
                 />
-                <TouchableOpacity>
-                    <View style={styles.logSignBtn}>
-                        <Text style={styles.logBtntxt}>SUBMIT</Text>
-                    </View>
-                </TouchableOpacity>
-                {/* <View style={{width:46}}>
-                    <Pressable style={styles.logSignBtn}>
-                        <Text style={styles.logBtntxt}>Login</Text>
-                    </Pressable>
-                </View> */}
+                <GreenBtn value="SUBMIT"/>
                 <TouchableOpacity>
                     <Text style={styles.forget}>FORGOT PASSWORD?</Text>
                 </TouchableOpacity>

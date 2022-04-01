@@ -12,7 +12,6 @@ import NavigationUsingDrawer from './NavigationUsingDrawer';
 
 function MainStack(Stack) {
     return (
-        // <Stack.Navigator initialRoutName={navigationStrings.HOME}>
         <>
             <Stack.Screen name='Drawer' component={NavigationUsingDrawer} options={{ headerShown: false }} />
             <Stack.Screen name="Footer" component={Footer} options={{ headerShown: false }} />
@@ -25,8 +24,7 @@ function MainStack(Stack) {
             {/* <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/> */}
 
             <Stack.Screen name="DeliverOnTrain" component={DeliverOnTrain} options={{ headerShown: false }} />
-</>
-        // </Stack.Navigator>
+        </>
     );
 }
 export default MainStack;
