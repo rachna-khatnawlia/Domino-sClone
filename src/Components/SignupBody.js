@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/styles';
 import { View, Text, TouchableOpacity, Image, TextInput, Pressable } from 'react-native';
+import PhoneInput from "react-native-phone-number-input";
+
 import GreenBtn from './GreenBtn';
 
 export default function SignupBody({ navigation, value }) {
+    const [name, setName] = useState('')
+    const [mob, setMob] = useState('')
+    const [pass, setPass] = useState('')
+
     return (
         <View style={styles.signupBody}>
 
@@ -13,13 +19,20 @@ export default function SignupBody({ navigation, value }) {
             />
 
             <View style={styles.loginBg}>
-                <TextInput style={styles.input} placeholder={"Full Name"} />
-                <TextInput style={styles.input} placeholder={"Mobile No.*"} />
-                <TextInput style={styles.input} placeholder={"Password"} />
-                <TextInput style={styles.input} placeholder={"Repeat Password"} />
+                <PhoneInput placeholder={"Mobile No.*"}
+                    containerStyle={{ height: 48, width: '92%', borderRadius: 3 }}
+                    onChangeText={(value) => setMob(value)} />
+                <TextInput style={styles.input} placeholder={"Full Name"}
+                    onChangeText={(value) => setName(value)} />
+                <TextInput style={styles.input} placeholder={"Password"}
+                    onChangeText={(value) => setPass(value)}
+                    secureTextEntry={true} />
+                <TextInput style={styles.input} placeholder={"Repeat Password"} secureTextEntry={true} />
 
-                <GreenBtn value="SUBMIT"/>
-                
+                <Text>Your name is {name}, Mobile no. is {mob}, and password is {pass}</Text>
+
+                <GreenBtn value="SUBMIT" />
+
                 <TouchableOpacity onPress={() => { navigation.navigate('Login') }}>
                     <Text style={styles.forget}>Already Have an Account? LOGIN</Text>
                 </TouchableOpacity>
