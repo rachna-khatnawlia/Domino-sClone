@@ -10,6 +10,9 @@ export default function SignupBody({ navigation }) {
     const [name, setName] = useState('')
     const [mob, setMob] = useState('')
     const [pass, setPass] = useState('')
+    const [cpass, setcPass] = useState('')
+
+
 
     const [passwordVisible, setPasswordVisible] = useState(true)
 
@@ -21,21 +24,47 @@ export default function SignupBody({ navigation }) {
         }
     }
 
-    const [show, setShow] = useState(false)
+    const [mobError, setmobError] = useState(false)
+    const [nameError, setnameError] = useState(false)
+    const [passError, setpassError] = useState(false)
+    const [passDoesNotMatch, setpassDoesNotMatch] = useState(false)
+
+    const phoneRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
+    const nameRegex = /^[a-zA-Z]{2,40}[ ]*([a-zA-Z]{2,40})+$/;
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/
+
     const Details = () => {
-        if (name.length != 0) {
-            { navigation.navigate('User', { fullname: name, mobile: mob, password: pass }) }
-            // if (mob.length == 10) {
-            //     // if(pass.length>=6)
-            //     setShow(true);
-            //     { navigation.navigate('User', { fullname: name, mobile: mob }) }
-            // } else (
-            //     setShow(false)
-            // )
-        } else {
-            setShow(false)
+        if (phoneRegex.test(mob)) {
+            setmobError(false)
+
+            if (nameRegex.test(name)) {
+                setnameError(false)
+
+                if (passRegex.test(pass) && passRegex.test(cpass)) {
+                    setpassError(false)
+                    console.log('ok')
+                    if (pass === cpass) {
+                        setpassDoesNotMatch(false)
+
+                        navigation.navigate('User', { fullname: name, mobile: mob, password: pass })
+                        console.log("good to go");
+                    }
+                    else {
+                        setpassDoesNotMatch(true)
+                    }
+                } else {
+                    setpassError(true)
+                }
+            } 
+            else {
+                setnameError(true)
+            }
+        }
+        else {
+            setmobError(true)
         }
     }
+
 
     return (
         <View style={styles.signupBody}>
@@ -52,7 +81,7 @@ export default function SignupBody({ navigation }) {
                     onChangeText={(value) => setMob(value)}
                 />
                 {
-                    // !show ? <Text style={{ textAlign: 'center', color: 'red' }}>Phone Number should have 10 digits</Text> : null
+                    mobError ? <Text style={{ textAlign: 'center', color: 'red' }}>Phone Number should have exactly 10 digits</Text> : null
                 }
                 {/* Full Name */}
                 <TextInput
@@ -61,7 +90,7 @@ export default function SignupBody({ navigation }) {
                     onChangeText={(value) => setName(value)}
                 />
                 {
-                    !show ? <Text style={{ textAlign: 'center', color: 'red' }}>Invalid Name</Text> : null
+                    nameError ? <Text style={{ textAlign: 'center', color: 'red' }}>Name should have atleast 2 alphabets</Text> : null
                 }
 
                 {/* password eye working */}
@@ -85,7 +114,7 @@ export default function SignupBody({ navigation }) {
                     <TextInput
                         style={styles.input}
                         placeholder={"Repeat Password"}
-                        onChangeText={(value) => setPass(value)}
+                        onChangeText={(value) => setcPass(value)}
                         secureTextEntry={passwordVisible}
                     />
                     <TouchableOpacity onPress={handlePasswordEye} style={{ position: 'absolute', right: 20, top: 21 }}>
@@ -96,8 +125,18 @@ export default function SignupBody({ navigation }) {
                     </TouchableOpacity>
                 </View>
 
+                {
+                    passError ?
+                        <Text style={{ textAlign: 'center', color: 'red' }}>
+                            Password should have atleast 8 digits, 1 capital letter, 1 lowerCase Letter and 1 special digit.
+                        </Text>
+                        : null
+                }
+                {
+                    passDoesNotMatch ? <Text style={{ textAlign: 'center', color: 'red' }}>Password in both the fields must be same.</Text> : null
+                }
 
-                <Text>Your name is {name}, Mobile no. is {mob}, and password is {pass}</Text>
+                {/* <Text>Your name is {name}, Mobile no. is {mob}, and password is {pass}</Text> */}
 
 
                 <TouchableOpacity onPress={Details}>
@@ -107,7 +146,7 @@ export default function SignupBody({ navigation }) {
                 </TouchableOpacity>
 
 
-                <GreenBtn value="SUBMIT" />
+                {/* <GreenBtn value="SUBMIT" /> */}
 
                 <TouchableOpacity onPress={() => { navigation.navigate('Login') }}>
                     <Text style={styles.forget}>Already Have an Account? LOGIN</Text>
