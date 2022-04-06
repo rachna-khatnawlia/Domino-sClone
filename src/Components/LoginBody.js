@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import styles from '../styles/styles';
 import { View, Text, TouchableOpacity, Image, TextInput, Pressable } from 'react-native';
 import PhoneInput from "react-native-phone-number-input";
-
+import { login } from '../redux/actions/auth';
 import GreenBtn from './GreenBtn';
+import { useDispatch } from 'react-redux';
+
 
 export default function LoginBody({ navigation, value }) {
+    const dispatch = useDispatch();
+
     const [pass, setPass] = useState('')
     const [mob, setMob] = useState('')
 
@@ -61,14 +65,19 @@ export default function LoginBody({ navigation, value }) {
                         />
                     </TouchableOpacity>
                 </View>
-                <GreenBtn value="SUBMIT" />
+                {/* <GreenBtn value="SUBMIT" /> */}
+                <TouchableOpacity onPress={()=>dispatch(login())}>
+                    <View style={styles.logSignBtn}>
+                        <Text style={styles.logBtntxt}>SUBMIT</Text>
+                    </View>
+                </TouchableOpacity>
 
                 <TouchableOpacity>
                     <Text style={styles.forget}>FORGOT PASSWORD?</Text>
                 </TouchableOpacity>
             </View>
 
-            
+
             <TouchableOpacity style={{ position: 'absolute', bottom: 155, left: 70 }} onPress={() => { navigation.navigate('SignUp') }}>
                 <Text style={styles.forget}>Don't Have an Account? Create Now</Text>
             </TouchableOpacity>

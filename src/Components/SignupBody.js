@@ -31,7 +31,7 @@ export default function SignupBody({ navigation }) {
 
     const phoneRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
     const nameRegex = /^[a-zA-Z]{2,40}[ ]*([a-zA-Z]{2,40})+$/;
-    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
 
     const Details = () => {
         if (phoneRegex.test(mob)) {

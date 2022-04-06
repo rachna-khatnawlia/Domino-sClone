@@ -1,7 +1,9 @@
 import React from 'react';
 // importing style
 import styles from '../styles/styles';
-
+import { logout } from '../redux/actions/auth';
+// import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 //components import
 import ProjectHeader from '../Components/ProjectHeader';
 import Deliver from '../Components/Deliver';
@@ -17,12 +19,12 @@ import Best_Sellers from '../assets/FlatListData/Bestsellers.js';
 import {
     View,
     Text,
-    FlatList, Image, SafeAreaView, ScrollView, ImageBackground, Pressable
+    FlatList, Image, SafeAreaView, ScrollView, ImageBackground, Pressable, Button
 } from 'react-native';
 
 
 const Home = ({navigation}) => {
-    
+    const dispatch = useDispatch()
     return (
 
         <SafeAreaView>
@@ -101,7 +103,7 @@ const Home = ({navigation}) => {
                             }}
                         />
                     </View>
-
+                            <Button title='Logout' onPress={() => dispatch(logout())}/>
                 </View>
             </ScrollView>
 
