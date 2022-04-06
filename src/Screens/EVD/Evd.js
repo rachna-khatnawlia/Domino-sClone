@@ -3,7 +3,6 @@ import React from 'react';
 // importing externnal file
 import styles from "../../styles/styles";
 
-
 import {
     SafeAreaView,
     StatusBar,

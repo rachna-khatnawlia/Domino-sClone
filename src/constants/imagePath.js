@@ -1,8 +1,9 @@
 import { requireNativeComponent } from 'react-native';
 
-export default{
-train: require('../assets/images/train.png'),
-doubleArrow: require('../assets/images/arrow.png'),
+export default {
+  doubleArrow: require('../assets/images/arrow.png'),
+  
   //-----------Deliver On Train----------------
+  train: require('../assets/images/train.png'),
   dotBg: require('../assets/images/DeliverOnTrain/deliverBg.jpeg'),
 };

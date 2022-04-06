@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from '../styles/styles';
 
+//common Links
+import navigationStrings from '../navigation/navigationStrings';
+import ImagePath from '../constants/ImagePath';
+
 import{View, Image, Text, TouchableOpacity} from 'react-native';
 import RadioForm,{RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 
@@ -13,24 +17,25 @@ const Deliver = ({navigation}) => {
       ];
     return (
         <View style={styles.deliver}>
-            <View style={styles.deliverbox1}>
 
+            {/* Radio Buttons */}
+            <View style={styles.deliverbox1}>
                 <RadioForm style={styles.deliverRadios}
                     radio_props={deliver}
                     buttonSize={7}
                     labelColor="grey"
                     // padding={10}
                     selectedLabelColor="black"
-                />
-                
+                />   
             </View>
-            <View><Text>        </Text></View>
+
+            {/* Delievr On Train */}
             <TouchableOpacity 
-                onPress={()=>navigation.navigate('DeliverOnTrain')} 
+                onPress={()=>navigation.navigate(navigationStrings.DELIVER_ON_TRAIN)} 
                 style={styles.deliverbox2}
             >
-                <Image source={require('../assets/images/train.png')} style={styles.deliverbox2Img} />
-                <Text style={{ fontSize: 11, lineHeight: 12, paddingLeft: 0}}>Deliver{'\n'}On Train</Text>
+                <Image source={ImagePath.train} style={styles.deliverbox2Img} />
+                <Text style={styles.deliverbox2Txt}>Deliver{'\n'}On Train</Text>
             </TouchableOpacity>
         </View>
     );

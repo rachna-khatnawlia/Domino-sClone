@@ -19,23 +19,25 @@ import Best_Sellers from '../assets/FlatListData/Bestsellers.js';
 import {
     View,
     Text,
-    FlatList, Image, SafeAreaView, ScrollView, ImageBackground, Pressable, Button
+    FlatList, Image, SafeAreaView, ScrollView, ImageBackground, Pressable, Button, TouchableOpacity
 } from 'react-native';
 
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
     const dispatch = useDispatch()
     return (
 
         <SafeAreaView>
             {/* Header */}
-            <ProjectHeader navigation={navigation}/>
+            <ProjectHeader navigation={navigation} />
 
             <ScrollView style={{ display: 'flex' }}>
+
                 <View style={styles.container}>
+
                     {/* Deliver  */}
-                    <Deliver navigation={navigation}/>
-                    
+                    <Deliver navigation={navigation} />
+
                     {/* offers */}
                     <FlatList horizontal
                         data={Offers1}
@@ -64,7 +66,7 @@ const Home = ({navigation}) => {
 
 
                     {/* Choose Pizza */}
-                    <ChoosePizza />
+                    <ChoosePizza navigation={navigation} />
 
                     {/* Easy Order   */}
                     <EasyOrder />
@@ -74,11 +76,14 @@ const Home = ({navigation}) => {
                         <Text style={styles.exploreheading}>Offers</Text>
                         <Text style={{ position: 'absolute', bottom: 8, right: 5, color: '#2b63a0', fontSize: 12 }}>VIEW ALL</Text>
                     </View>
+
                     <FlatList horizontal
                         data={Offers}
                         renderItem={(main) => {
                             return (
-                                <Image source={main.item.title} style={styles.offers} />
+                                <TouchableOpacity>
+                                    <Image source={main.item.title} style={styles.offers} />
+                                </TouchableOpacity>
                             )
                         }}
                     />
@@ -103,7 +108,7 @@ const Home = ({navigation}) => {
                             }}
                         />
                     </View>
-                            <Button title='Logout' onPress={() => dispatch(logout())}/>
+                    <Button title='Logout' onPress={() => dispatch(logout())} />
                 </View>
             </ScrollView>
 

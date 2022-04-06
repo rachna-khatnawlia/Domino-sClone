@@ -15,6 +15,7 @@ const CartHeader = ({ navigation }) => {
             // ---------->Cart header------------------ 
             <View style={styles.expMenu}>
                 <View style={styles.Headsection1}>
+
                     <View style={styles.Headsection1a}>
                         <TouchableOpacity onPress={() => { navigation.navigate('Home') }}>
                             <Image
@@ -27,6 +28,7 @@ const CartHeader = ({ navigation }) => {
                     <View style={styles.Headsection1b}>
                         <Text style={{ fontSize: 14, color: '#fff', fontWeight: '500' }}>Empty Cart</Text>
                     </View>
+                    
                 </View>
             </View>
 

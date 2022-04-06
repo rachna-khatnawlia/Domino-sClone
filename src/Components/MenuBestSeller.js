@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/styles";
 
 //importing Flatlist
 import BestsellerPizza from "../assets/FlatListData/BestsellerPizza";
 
-import { Text, View, ScrollView, FlatList, ImageBackground, Pressable, Image } from "react-native";
+import { Text, View, ScrollView, FlatList, ImageBackground, Pressable, Image, TouchableOpacity } from "react-native";
 
 
 const MenuBestSeller = () => {
+  const [liked, setLiked] = useState(false)
+  const like = () => {
+    if (liked) {
+      setLiked(false)
+    } else {
+      setLiked(true)
+    }
+  }
+
   return (
     <ScrollView style={{ display: 'flex' }}>
 
@@ -47,10 +56,13 @@ const MenuBestSeller = () => {
                     <Pressable style={styles.RecBtn}>
                       <Text style={styles.RecBtntxt}>Recommended</Text>
                     </Pressable>
-                    <Image
-                      source={require('../assets/images/BestSellers/like.png')}
-                      style={{ height: 30, width: 30 }}
-                    />
+
+                    <TouchableOpacity onPress={like}>
+                      <Image
+                        source={liked ? require('../assets/images/BestSellers/redLike.png') : require('../assets/images/BestSellers/like.png')}
+                        style={{ height: 30, width: 30 }}
+                      />
+                    </TouchableOpacity>
                   </View>
                   <Text style={styles.bestSellerCardPrice}>{main.item.price}</Text>
                 </ImageBackground>

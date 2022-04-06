@@ -5,6 +5,7 @@ import { View, Text, StatusBar, Image, TouchableOpacity} from 'react-native';
 
 import ActionSheet, { SheetManager } from "react-native-actions-sheet";
 
+import navigationStrings from '../navigation/navigationStrings';
 import Language from './Language';
 
 
@@ -14,34 +15,31 @@ const ProjectHeader = ({navigation}) => {
     }
     return (
         <View style={styles.headerBox}>
+
+            {/* -----------------------Drawer Show Icon--------------------------- */}
             <View style={{flex:1}}>
-                <TouchableOpacity onPress={() => navigation.toggleDrawer('Drawer')}>
+                <TouchableOpacity onPress={() => navigation.toggleDrawer(navigationStrings.DRAWER)}>
                     <Image source={require('../assets/images/listHeader.png')} style={styles.headerImage} />
                 </TouchableOpacity>
             </View>
             
+            {/* -----------------------Address bar--------------------------- */}
             <View style={{flex:4}}>
                 <Text style={styles.headerText}>Deliver To                 
                     {/* <Image source={require('../assets/images/seemore.png')} style={styles.deliverTo}/> */}
-                    {'\n'}<Text style={{textDecorationLine:'underline', textDecorationStyle:'dotted',paddingBottom:50}}>Sector26, Chandigarh</Text>
+                    {'\n'}
+                    <Text style={styles.headerText2}>Sector26, Chandigarh</Text>
                 </Text>
             </View>
             
-            <View style={{flex:2, flexDirection:'row'}}>
-                {/* <Image source={require('../assets/images/pizzaPalHeader.jpeg')} style={{height:40,width:70}} /> */}
-            </View>
-            
+            {/* -----------------------Language File For ActionSheet--------------------------- */}       
             <Language/>
-
             <View style={{flex:1}}>
                 <TouchableOpacity onPress={ShowActionSheet}>
                     <Image source={require('../assets/images/languageHeader.jpeg')}/>
                 </TouchableOpacity>
             </View>
             
-            {/* <ActionSheet id="language" style>
-                <Text>Hello ActionSheet</Text>
-            </ActionSheet> */}
         </View> 
     );
 };

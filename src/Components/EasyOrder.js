@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/styles';
 
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 import Divider from 'react-native-elements/dist/divider/Divider';
 
@@ -14,10 +14,12 @@ const EasyOrder = () => {
         <Text style={styles.text1}>5 Items {'\n'}Paneer & Onion, Capsicum, Onion</Text>
         <Divider width={1}></Divider>
       </View>
-      
+
       <View>
         <Text style={styles.text1}>Order Placed on 1 January {'\n'}for Amount Rs. 389</Text>
-        <Text style={styles.reorder}>REORDER</Text>
+        <TouchableOpacity style={styles.reorderTouchable}>
+          <Text style={styles.reorder}>REORDER</Text>
+        </TouchableOpacity>
         <Text style={styles.textUnderReorder}>View cart on next step.</Text>
       </View>
     </View>

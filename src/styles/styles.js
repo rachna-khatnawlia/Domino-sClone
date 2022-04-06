@@ -22,14 +22,18 @@ const styles = StyleSheet.create({
   headerImage: {
     height: 18,
     width: 35,
-    marginRight: 5
   },
   headerText: {
     color: '#fff',
     fontWeight: '500',
     fontSize: 14,
-    paddingLeft: 5
   },
+  headerText2: {
+    textDecorationLine: 'underline',
+    textDecorationStyle: 'dotted',
+    paddingBottom: 50
+  },
+
   deliverTo: {
     height: 10,
     width: 10
@@ -53,6 +57,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
+    textAlignVertical: 'center',
     paddingTop: 7,
   },
   deliverbox2: {
@@ -70,6 +75,11 @@ const styles = StyleSheet.create({
     width: 22,
     alignSelf: 'center',
     resizeMode: 'contain',
+  },
+  deliverbox2Txt: {
+    fontSize: 11,
+    lineHeight: 12,
+    paddingLeft: 0
   },
 
 
@@ -154,17 +164,20 @@ const styles = StyleSheet.create({
     // paddingHorizontal:20,
     paddingVertical: 9,
     textAlign: 'center',
-    backgroundColor: '#2cb852',
+    backgroundColor: 'green',
     color: 'white',
     fontSize: 12,
     fontWeight: 'bold',
     width: width / 4.5,
     marginTop: 10,
+    overflow: 'hidden',
+    borderRadius: 3
+  },
+  reorderTouchable:{
     position: 'absolute',
     right: 0,
     top: 12,
-    overflow: 'hidden',
-    borderRadius: 3
+
   },
   textUnderReorder: {
     position: 'absolute',
@@ -249,6 +262,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
 
+  //---------------------------->
+
+
+
   //----------------------------> MenuHeader
   expMenu: {
     backgroundColor: '#2b63a0',
@@ -272,13 +289,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   Headsection1Img: {
-    height: 25,
-    width: 30,
+    height: 22,
+    width: 25,
     resizeMode: 'contain',
     paddingHorizontal: 5
   },
   Headsection1b: {
-    flex: 0.8,
+    flex: 0.6,
     alignSelf: 'center',
     // alignItems:'center'
     // justifyContent: 'center'
@@ -292,13 +309,18 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   Headsection1c: {
-    flex: 0.2,
-    justifyContent: 'center'
+    flex: 0.31,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    height: 27, marginRight: 15,
+    borderRadius: 4
   },
   Headsection1ctxt: {
     color: 'white',
     fontSize: 12,
-    fontWeight: '400'
+    fontWeight: '500'
   },
   Headsection1d: {
     flex: 0.1,
@@ -543,39 +565,39 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
     height: 100
   },
-  whitedotbg: { 
-    backgroundColor: '#fff', 
-    padding: 15, 
-    margin: 8 
+  whitedotbg: {
+    backgroundColor: '#fff',
+    padding: 15,
+    margin: 8
   },
-  txtAfterInputPNR: { 
-    color: 'green', 
-    fontWeight: '300', 
-    letterSpacing: 0.5, 
-    paddingHorizontal: 5 
+  txtAfterInputPNR: {
+    color: 'green',
+    fontWeight: '300',
+    letterSpacing: 0.5,
+    paddingHorizontal: 5
   },
-  dotCheckBox: { 
-    alignSelf: "center", 
-    height: 15, 
-    width: 15, 
-    marginRight: 7 
+  dotCheckBox: {
+    alignSelf: "center",
+    height: 15,
+    width: 15,
+    marginRight: 7
   },
-  dotChecktxt: { 
-    fontSize: 13, 
-    color: 'grey', 
-    fontWeight: '500' 
+  dotChecktxt: {
+    fontSize: 13,
+    color: 'grey',
+    fontWeight: '500'
   },
-  dotHisTxt1: { 
-    flex: 0.1 
+  dotHisTxt1: {
+    flex: 0.1
   },
-  dotHisTxt2: { 
-    flex: 0.8, 
-    alignSelf: 'center' 
+  dotHisTxt2: {
+    flex: 0.8,
+    alignSelf: 'center'
   },
-  dotHisTxt3: { 
-    flex: 0.1, 
-    alignSelf: 'center', 
-    alignItems: 'flex-end' 
+  dotHisTxt3: {
+    flex: 0.1,
+    alignSelf: 'center',
+    alignItems: 'flex-end'
   },
   flexRow: {
     display: 'flex', flexDirection: 'row',
@@ -601,9 +623,9 @@ const styles = StyleSheet.create({
     fontSize: 15,
     paddingBottom: 5
   },
-  ulText3:{
-    color: '#2b63a0', 
-    paddingTop: 10, 
+  ulText3: {
+    color: '#2b63a0',
+    paddingTop: 10,
     fontWeight: '500'
   }
 
