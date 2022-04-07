@@ -22,7 +22,6 @@ function MainStack(Stack) {
             <Stack.Screen name={navigationStrings.HOME} component={Home} options={{ headerShown: false }} />
             <Stack.Screen name={navigationStrings.DELIVER_ON_TRAIN} component={DeliverOnTrain} options={{ headerShown: false }} />
             <Stack.Screen name={navigationStrings.SEARCH_MENU} component={SearchMenu} options={{ headerShown: true }} />
-            <Stack.Screen name={navigationStrings.EVD} component={SearchMenu} options={{ headerShown: true }} />
 
         </>
     );

@@ -1,0 +1,46 @@
+const EVD_data = [
+    {
+        id: '1',
+        cancelprice: 'Rs 179',
+        price: 'Rs 99',
+        veg: 'true',
+        url: require('../../assets/images/Evd/img1.jpeg'),
+        title: 'Achari Do Pyaza',
+        Description: 'Tangy & spicy achari flavours on a super cheesy onion pizza-as desi as it gets!',
+    },
+    {
+        id: '2',
+        cancelprice: 'Rs 179',
+        price: 'Rs 99',
+        veg: 'false',
+        url: require('../../assets/images/Evd/img2.jpeg'),
+        title: 'Cheese n Tomato',
+        Description: 'Tangy & spicy achari flavours on a super cheesy onion pizza-as desi as it gets!',
+    },
+    {
+        id: '3',
+        cancelprice: 'Rs 179',
+        price: 'Rs 99',
+        veg: 'true',
+        url: require('../../assets/images/Evd/img3.jpeg'),
+        title: 'Maroccan Spice Pasta Pizza-Veg',
+        Description: 'Tangy & spicy achari flavours on a super cheesy onion pizza-as desi as it gets!',
+    },
+    {
+        id: '4',
+        cancelprice: 'Rs 179',
+        price: 'Rs 99',
+        url: require('../../assets/images/Evd/img4.jpeg'),
+        title: 'Cheese n Corn',
+        Description: 'Tangy & spicy achari flavours on a super cheesy onion pizza-as desi as it gets!',
+    },
+    {
+        id: '5',
+        cancelprice: 'Rs 179',
+        price: 'Rs 139',
+        url: require('../../assets/images/Evd/img5.jpeg'),
+        title: 'Fresh Veggie',
+        Description: 'Tangy & spicy achari flavours on a super cheesy onion pizza-as desi as it gets!',
+    },
+];
+export default EVD_data;

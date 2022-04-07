@@ -21,6 +21,8 @@ import {
     Text,
     FlatList, Image, SafeAreaView, ScrollView, ImageBackground, Pressable, Button, TouchableOpacity
 } from 'react-native';
+import ImagePath from '../constants/ImagePath';
+import BirthdayOffer from '../Components/birthdayOffer';
 
 
 const Home = ({ navigation }) => {
@@ -39,14 +41,17 @@ const Home = ({ navigation }) => {
                     <Deliver navigation={navigation} />
 
                     {/* offers */}
-                    <FlatList horizontal
+                    {/* <FlatList horizontal
                         data={Offers1}
                         renderItem={(element) => {
                             return (
                                 <Image source={element.item.title} style={styles.offers1} />
                             )
                         }}
-                    />
+                    /> */}
+
+                    {/* BIRTHDAY Offer */}
+                    <BirthdayOffer navigation={navigation}/>
 
                     {/* Explore Menu */}
                     <Text style={styles.exploreheading}>Explore Menu</Text>
@@ -63,7 +68,6 @@ const Home = ({ navigation }) => {
                         }}
                         numColumns={3}
                     />
-
 
                     {/* Choose Pizza */}
                     <ChoosePizza navigation={navigation} />
@@ -113,8 +117,6 @@ const Home = ({ navigation }) => {
             </ScrollView>
 
         </SafeAreaView>
-
-
 
     );
 };

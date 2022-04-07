@@ -82,7 +82,11 @@ const styles = StyleSheet.create({
     paddingLeft: 0
   },
 
-
+  brithdayPartyOffer: {
+    height: 110,
+    marginTop: 10,
+    marginBottom: 5,
+  },
   offers1: {
     height: 120,
     width: 280,
@@ -119,13 +123,13 @@ const styles = StyleSheet.create({
   },
 
   choosePizza: {
-    height: 100,
+    height: 90,
     margin: 5,
     marginTop: 0,
     marginBottom: 15,
-    borderRadius: 5,
+    borderRadius: 3,
     width: width - 10,
-    resizeMode: 'contain',
+    resizeMode: 'stretch',
   },
 
   easyOrderBlock: {
@@ -173,7 +177,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderRadius: 3
   },
-  reorderTouchable:{
+  reorderTouchable: {
     position: 'absolute',
     right: 0,
     top: 12,
@@ -187,9 +191,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   offers: {
-    height: 150,
+    height: 125,
+    width: 290,
     margin: 5,
-    resizeMode: "contain",
+    resizeMode: 'stretch',
     borderRadius: 5
   },
   bestsellersDiv: {
@@ -205,9 +210,9 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
   },
   bestsellersImg: {
-    width: 150,
-    height: 180,
-    resizeMode: 'contain',
+    width: 160,
+    height: 155,
+    resizeMode: 'stretch',
     borderTopEndRadius: 5,
     borderTopStartRadius: 5,
     opacity: 0.9
@@ -278,9 +283,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     textAlign: 'center',
-    // justifyContent:'center',
-    // alignItems:'center',
-    // color:'red'
     paddingTop: 5,
     paddingBottom: 10
   },
@@ -390,7 +392,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 
-  // EVD
+  // ----------------------------------EVD
   Headsection2evd: {
     display: 'flex',
     flexDirection: 'row',
@@ -399,7 +401,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   Headsection2evdtxt: {
-    paddingHorizontal: 15,
+    paddingHorizontal: 5,
     fontWeight: '500',
     color: 'white'
   },
@@ -409,7 +411,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     textAlign: 'center',
     justifyContent: 'space-between',
-    // paddingVertical:7,
     paddingHorizontal: 20,
     height: 35,
     alignItems: 'center'
@@ -422,8 +423,6 @@ const styles = StyleSheet.create({
   bestSellerCardImgedv: {
     position: 'relative',
     height: 125,
-    // width: '100%',
-    // backgroundColor:'red',
     resizeMode: 'stretch',
     opacity: 0.9
   },
@@ -461,25 +460,49 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row'
   },
+  section3edvtxt: {
+    height: 15,
+    width: 15,
+    marginLeft: 5
+  },
   section4edv: {
-    display: 'flex',
-    flexDirection: 'row',
     justifyContent: 'space-between',
     paddingVertical: 5
   },
+  section4edv1txt: {
+    color: 'grey',
+    fontSize: 13,
+    paddingBottom: 3,
+    fontWeight: '500'
+  },
+  section4edvDownArrow: {
+    height: 15,
+    width: 15,
+    alignSelf: 'center',
+    marginLeft: 5
+  },
+  section4edvSelectBox: {
+    backgroundColor: 'green',
+    opacity: 0.9,
+    paddingVertical: 5,
+    paddingHorizontal: 20,
+    borderRadius: 3
+  },
+  section4edvSelectBoxTxt: {
+    fontSize: 12,
+    color: '#FFF',
+    fontWeight: '600'
+  },
 
-  // cart
+
+  //---------------------------------> cart
   cartBody: {
-    // flex:1,
     display: 'flex',
     height: '100%',
-    // position:'relative',
     backgroundColor: "#e3f1ff",
     justifyContent: 'center',
     alignItems: 'center',
   },
-
-
 
 
   // ------------------------>Login / Signup
@@ -516,7 +539,6 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     marginVertical: 8,
-    // marginHorizontal: 20,
     borderWidth: 0,
     borderBottomWidth: 0.3,
     paddingHorizontal: 10,
@@ -608,12 +630,10 @@ const styles = StyleSheet.create({
     paddingBottom: 5
   },
   ul2: {
-    // fontWeight:'bold',
     fontSize: 20,
     fontWeight: 'bold'
   },
   ul2txt: {
-    // color:'grey',
     fontWeight: "300",
     padding: 5,
   },
@@ -632,4 +652,3 @@ const styles = StyleSheet.create({
 });
 
 export default styles;
-// #edf3ff

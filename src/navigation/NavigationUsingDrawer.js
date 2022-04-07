@@ -20,7 +20,6 @@ export default function NavigationUsingDrawer() {
     <Drawer.Navigator screenOptions={{ headerShown: false }}>
 
       <Drawer.Screen name={navigationStrings.HOME} component={Home}
-        // style={[focused?{}]}
         options={{
           headerShown: false,
           drawerIcon: ({ focused, size }) => (
