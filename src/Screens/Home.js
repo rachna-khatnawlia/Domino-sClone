@@ -1,9 +1,12 @@
 import React from 'react';
+
 // importing style
 import styles from '../styles/styles';
 import { logout } from '../redux/actions/auth';
+
 // import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+
 //components import
 import ProjectHeader from '../Components/ProjectHeader';
 import Deliver from '../Components/Deliver';
@@ -16,13 +19,14 @@ import Offers from '../assets/FlatListData/Offers.js';
 import Explore from '../assets/FlatListData/Explore.js';
 import Best_Sellers from '../assets/FlatListData/Bestsellers.js';
 
+import BirthdayOffer from '../Components/birthdayOffer';
+
 import {
     View,
     Text,
     FlatList, Image, SafeAreaView, ScrollView, ImageBackground, Pressable, Button, TouchableOpacity
 } from 'react-native';
-import ImagePath from '../constants/ImagePath';
-import BirthdayOffer from '../Components/birthdayOffer';
+
 
 
 const Home = ({ navigation }) => {

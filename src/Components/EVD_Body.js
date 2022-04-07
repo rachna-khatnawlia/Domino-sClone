@@ -6,7 +6,7 @@ import ImagePath from '../constants/ImagePath';
 import EVD_data from "../assets/FlatListData/EVD_Data";
 
 import { View, Text, Image, FlatList, ImageBackground, Pressable, ScrollView, TouchableOpacity } from "react-native";
-const EVD_Body = ({ navigation }) => {
+const EVD_Body = ({navigation}) => {
     return (
         <>
             <ScrollView>
@@ -38,7 +38,7 @@ const EVD_Body = ({ navigation }) => {
 
                                         <Pressable style={styles.section3edv}>
                                             <Text style={{ fontSize: 12 }}>CUSTOMIZE</Text>
-                                            <Image source={ImagePath.forwardArrow} style={styles.section3edvtxt} />
+                                            <Image source={ImagePath.forwardArrow} style={styles.section3edvtxt}/>
                                         </Pressable>
 
                                     </ImageBackground>
@@ -47,7 +47,7 @@ const EVD_Body = ({ navigation }) => {
 
                                         <Text style={styles.bestSellerCardtitle}>{main.item.title}</Text>
 
-                                        <View style={[styles.flexRow, { paddingVertical: 5 }]}>
+                                        <View style={[styles.flexRow, {paddingVertical: 5}]}>
                                             <Text>{main.item.Description}</Text>
                                         </View>
 
@@ -68,9 +68,9 @@ const EVD_Body = ({ navigation }) => {
                                             </View>
 
                                             <View style={{ alignSelf: 'center' }}>
-                                                <TouchableOpacity style={styles.section4edvSelectBox}>
+                                            <TouchableOpacity style={styles.section4edvSelectBox}>
                                                     <Text style={styles.section4edvSelectBoxTxt}>SELECT</Text>
-                                                </TouchableOpacity>
+                                            </TouchableOpacity>
                                             </View>
                                         </View>
 

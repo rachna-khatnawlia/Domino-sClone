@@ -10,6 +10,10 @@ export default {
   forwardArrow: require('../assets/images/Evd/forwardArrow.png'),
   downwardArrow: require('../assets/images/Evd/downwardArrow.png'),
 
+  //---------Project Header
+  showDrawer: require('../assets/images/listHeader.png'),
+  language: require('../assets/images/languageHeader.jpeg'),
+
   //------------------EVD----------------------
   filter: require('../assets/images/Evd/filter.png'),
   veg: require('../assets/images/Evd/veg.png'),

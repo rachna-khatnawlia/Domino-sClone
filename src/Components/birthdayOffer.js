@@ -9,13 +9,14 @@ import {
     Image, TouchableOpacity
 } from 'react-native';
 import { useDispatch } from 'react-redux';
+import navigationStrings from '../navigation/navigationStrings';
 
 
 const BirthdayOffer = ({ navigation }) => {
     const dispatch = useDispatch()
     return (
         <>
-            <TouchableOpacity onPress={() => navigation.navigate(navigationStrings.EVD)}>
+            <TouchableOpacity onPress={() => navigation.navigate(navigationStrings.MENU)}>
                 <View>
                     <Image source={ImagePath.birthday} style={[styles.choosePizza, styles.brithdayPartyOffer]} />
                 </View>

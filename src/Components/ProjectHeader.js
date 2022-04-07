@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '../styles/styles';
 
-import { View, Text, StatusBar, Image, TouchableOpacity} from 'react-native';
+import { View, Text, Image, TouchableOpacity} from 'react-native';
 
-import ActionSheet, { SheetManager } from "react-native-actions-sheet";
+import { SheetManager } from "react-native-actions-sheet";
 
 import navigationStrings from '../navigation/navigationStrings';
 import Language from './Language';
+import ImagePath from '../constants/ImagePath';
 
 
 const ProjectHeader = ({navigation}) => {
@@ -19,7 +20,7 @@ const ProjectHeader = ({navigation}) => {
             {/* -----------------------Drawer Show Icon--------------------------- */}
             <View style={{flex:1}}>
                 <TouchableOpacity onPress={() => navigation.toggleDrawer(navigationStrings.DRAWER)}>
-                    <Image source={require('../assets/images/listHeader.png')} style={styles.headerImage} />
+                    <Image source={ImagePath.ashowDrawer} style={styles.headerImage} />
                 </TouchableOpacity>
             </View>
             
@@ -36,7 +37,7 @@ const ProjectHeader = ({navigation}) => {
             <Language/>
             <View style={{flex:1}}>
                 <TouchableOpacity onPress={ShowActionSheet}>
-                    <Image source={require('../assets/images/languageHeader.jpeg')}/>
+                    <Image source={ImagePath.language}/>
                 </TouchableOpacity>
             </View>
             
