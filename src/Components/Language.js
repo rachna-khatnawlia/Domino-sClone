@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/styles';
 import GreenBtn from './GreenBtn';
 
-import { View, Text, StatusBar, Image, TouchableOpacity} from 'react-native';
+import { View, Text, TouchableOpacity} from 'react-native';
 import ActionSheet, { SheetManager } from "react-native-actions-sheet";
 
 

@@ -20,7 +20,7 @@ const ProjectHeader = ({navigation}) => {
             {/* -----------------------Drawer Show Icon--------------------------- */}
             <View style={{flex:1}}>
                 <TouchableOpacity onPress={() => navigation.toggleDrawer(navigationStrings.DRAWER)}>
-                    <Image source={ImagePath.ashowDrawer} style={styles.headerImage} />
+                    <Image source={ImagePath.showDrawer} style={styles.headerImage} />
                 </TouchableOpacity>
             </View>
             

@@ -8,6 +8,7 @@ import {
     StatusBar,
     Text, View, Image, TouchableOpacity
 } from 'react-native';
+import ImagePath from '../constants/ImagePath';
 
 const CartHeader = ({ navigation }) => {
     return (
@@ -19,14 +20,14 @@ const CartHeader = ({ navigation }) => {
                     <View style={styles.Headsection1a}>
                         <TouchableOpacity onPress={() => { navigation.navigate('Home') }}>
                             <Image
-                                source={require('../assets/images/HeaderImages/backwardArrow.png')}s
+                                source={ImagePath.backwardArrow}
                                 style={styles.Headsection1Img}
                             />
                         </TouchableOpacity>
                     </View>
 
                     <View style={styles.Headsection1b}>
-                        <Text style={{ fontSize: 14, color: '#fff', fontWeight: '500' }}>Empty Cart</Text>
+                        <Text style={styles.headerText}>Empty Cart</Text>
                     </View>
                     
                 </View>

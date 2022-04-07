@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import styles from '../styles/styles';
 import navigationStrings from './navigationStrings';
+import ImagePath from '../constants/ImagePath';
 
 import Home from '../Screens/Home';
 import Menu from '../Screens/Menu/Menu';
@@ -24,7 +25,7 @@ export default function NavigationUsingDrawer() {
           headerShown: false,
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../assets/images/home.png')}
+              source={ImagePath.home}
               style={[focused ? styles.footerImg : styles.drawerInActive, { height: size, width: size }]}
             />
           ),
@@ -35,7 +36,7 @@ export default function NavigationUsingDrawer() {
           headerShown: false,
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../assets/images/menu.png')}
+              source={ImagePath.menu}
               style={[focused ? styles.footerImg : styles.drawerInActive, { height: size, width: size }]}
             />
           ),
@@ -46,7 +47,7 @@ export default function NavigationUsingDrawer() {
           headerShown: false,
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../assets/images/train.png')}
+              source={ImagePath.train}
               style={[focused ? styles.footerImg : styles.drawerInActive, { height: size, width: size }]}
             />
           ),
@@ -58,7 +59,7 @@ export default function NavigationUsingDrawer() {
           headerShown: false,
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../assets/images/cart.png')}
+              source={ImagePath.cart}
               style={[focused ? styles.footerImg : styles.drawerInActive, { height: size, width: size }]}
             />
           ),

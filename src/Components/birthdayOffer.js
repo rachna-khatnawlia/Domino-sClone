@@ -8,12 +8,12 @@ import {
     View,
     Image, TouchableOpacity
 } from 'react-native';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import navigationStrings from '../navigation/navigationStrings';
 
 
 const BirthdayOffer = ({ navigation }) => {
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
     return (
         <>
             <TouchableOpacity onPress={() => navigation.navigate(navigationStrings.MENU)}>

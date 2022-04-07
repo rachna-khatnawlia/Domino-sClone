@@ -9,10 +9,19 @@ export default {
   backwardArrow: require('../assets/images/HeaderImages/backwardArrow.png'),
   forwardArrow: require('../assets/images/Evd/forwardArrow.png'),
   downwardArrow: require('../assets/images/Evd/downwardArrow.png'),
+  cart: require('../assets/images/cart.png'),
+  menu: require('../assets/images/menu.png'),
+  home: require('../assets/images/home.png'),
 
   //---------Project Header
   showDrawer: require('../assets/images/listHeader.png'),
   language: require('../assets/images/languageHeader.jpeg'),
+
+  //------------------Cart--------------------
+  cartImg: require('../assets/images/cart/cartImg.jpeg'),
+
+  //--------------choosePizza Component----------
+  choosePizza: require('../assets/images/choosePizza.jpeg'),
 
   //------------------EVD----------------------
   filter: require('../assets/images/Evd/filter.png'),
@@ -29,7 +38,7 @@ export default {
   vegPizza: require('../assets/images/vegPizza.jpeg'),
   pizzaMania: require('../assets/images/pizzaMania.jpeg'),
   sides: require('../assets/images/Sides.jpeg'),
-  nonVegPizza : require('../assets/images/NonVegPizza.jpeg'),
+  nonVegPizza: require('../assets/images/NonVegPizza.jpeg'),
   mealCombos: require('../assets/images/MealCombos.jpeg'),
   desserts: require('../assets/images/Desserts.jpeg'),
 
@@ -45,16 +54,16 @@ export default {
   offerAboveBestseller9: require('../assets/images/images(5).jpeg'),
 
   //offer1 Home Page
-  OffersImg1 : require('../assets/images/Offer1/1.jpeg'),
-  OffersImg2 : require('../assets/images/Offer1/2.jpeg'),
-  OffersImg3 : require('../assets/images/Offer1/3.jpeg'),
-  OffersImg4 : require('../assets/images/Offer1/4.jpeg'),
-  OffersImg5 : require('../assets/images/Offer1/5.jpeg'),
-  OffersImg6 : require('../assets/images/Offer1/6.jpeg'),
-  OffersImg7 : require('../assets/images/Offer1/7.jpeg'),
-  OffersImg8 : require('../assets/images/Offer1/2.jpeg'),
-  OffersImg9 : require('../assets/images/Offer1/3.jpeg'),
-  OffersImg10 : require('../assets/images/Offer1/4.jpeg'),
+  OffersImg1: require('../assets/images/Offer1/1.jpeg'),
+  OffersImg2: require('../assets/images/Offer1/2.jpeg'),
+  OffersImg3: require('../assets/images/Offer1/3.jpeg'),
+  OffersImg4: require('../assets/images/Offer1/4.jpeg'),
+  OffersImg5: require('../assets/images/Offer1/5.jpeg'),
+  OffersImg6: require('../assets/images/Offer1/6.jpeg'),
+  OffersImg7: require('../assets/images/Offer1/7.jpeg'),
+  OffersImg8: require('../assets/images/Offer1/2.jpeg'),
+  OffersImg9: require('../assets/images/Offer1/3.jpeg'),
+  OffersImg10: require('../assets/images/Offer1/4.jpeg'),
 
   //Bestseller Home Page
   margherita: require('../assets/images/Margherita.jpeg'),
@@ -62,6 +71,6 @@ export default {
   peppyPaneer: require('../assets/images/peppyPaneer.jpeg'),
   veggieParadise: require('../assets/images/veggieParadise.jpeg'),
   cheeseCorn: require('../assets/images/cheeseCorn.jpeg'),
-  barbecueChicken: require('../assets/images/barbecueChicken.jpeg'), 
+  barbecueChicken: require('../assets/images/barbecueChicken.jpeg'),
 
 };

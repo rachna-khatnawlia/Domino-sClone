@@ -62,18 +62,18 @@ export default function DeliverOnTrainBody({ navigation }) {
             </View>
 
             {/*--------------IRCTC Order History----------------*/}
-            <TouchableOpacity 
-                    onPress={() => Alert.alert("Looks like you haven't plaed any ordera within IRCTC yet.")}
-                >
+            <TouchableOpacity
+                onPress={() => Alert.alert("Looks like you haven't plaed any ordera within IRCTC yet.")}
+            >
                 <View style={[styles.whitedotbg, styles.flexRow,]}>
                     <View style={styles.dotHisTxt1}>
-                        <Image source={ImagePath.train}style={styles.footerImg} />
+                        <Image source={ImagePath.train} style={styles.footerImg} />
                     </View>
                     <View style={styles.dotHisTxt2}>
                         <Text>IRCTC ORDER HISTORY</Text>
                     </View>
                     <View style={styles.dotHisTxt3}>
-                        <Image source={ImagePath.doubleArrow} style={{ height: 15, width: 15 }}/>
+                        <Image source={ImagePath.doubleArrow} style={{ height: 15, width: 15 }} />
                     </View>
                 </View>
             </TouchableOpacity>
@@ -93,7 +93,7 @@ export default function DeliverOnTrainBody({ navigation }) {
                 </Unorderedlist>
 
                 <TouchableOpacity>
-                    <Text style={ styles.ulText3 }>READ MORE</Text>
+                    <Text style={styles.ulText3}>READ MORE</Text>
                 </TouchableOpacity>
             </View>
 

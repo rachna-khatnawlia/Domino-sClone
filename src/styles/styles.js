@@ -503,6 +503,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  cartImgStyle: { borderRadius: 75, height: 150, width: 150, alignSelf: 'center', marginBottom: 25 },
+  cartPageText1:{ textAlign: 'center', fontSize: 18, fontWeight: "100" },
+  cartPageText2:{ textAlign: 'center', fontSize: 14, paddingVertical: 5, fontWeight: "300" },
 
 
   // ------------------------>Login / Signup
